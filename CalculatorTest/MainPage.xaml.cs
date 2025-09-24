@@ -129,14 +129,14 @@ public partial class MainPage : ContentPage
 
     private void btnPi_Clicked(object sender, EventArgs e)
     {
-        // show immediately
+        
         txtAnswer.Text = "How many bakers does it take to bake a pi? 3.1415926535";
 
-        // pop the alert 5 seconds later (runs on UI thread)
+        
         Dispatcher.StartTimer(TimeSpan.FromSeconds(5), () =>
         {
             _ = DisplayAlert("Haha!", "got you", $"{MyName}");
-            return false; // one-shot (don't repeat)
+            return false; 
         });
     }
 }
