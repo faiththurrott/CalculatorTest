@@ -31,11 +31,25 @@ class Calculator
         {
             InitializeComponent();
         }
-
+    public string correctText1;
+    public string correctText2;
         private void entryNum1_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            double dNumTemp = 0;
+            if(double.TryParse(entryNum1.Text, out dNumTemp))
+        {
+                correctText1 = entryNum1.Text;
         }
+        else
+        {
+            entryNum1.CursorPosition=correctText1.Length;
+            int selectionLength = e.NewTextValue.Length - correctText1.Length;
+            if(selectionLength > 0)
+            {
+                entryNum1.SelectionLength = selectionLength;
+            }
+        }
+     }
 
         private void entryNum2_TextChanged(object sender, TextChangedEventArgs e)
         {
