@@ -42,6 +42,12 @@
                     TextColor="White"
                     BackgroundColor="Pink"
                     Clicked="btnSubtract_Clicked"/>
+                <Button x:Name="btnPi"
+                    Text="π"
+                    FontSize="50"
+                    TextColor="white"
+                    BackgroundColor="pink"
+                    Clicked="btnPi_Clicked"/>
             </HorizontalStackLayout>
 
             <HorizontalStackLayout
@@ -65,7 +71,7 @@
                 <Button x:Name="btnRoot"
                      Text="^"
                      FontSize="50"
-                     Padding="35"
+                     Padding="25"
                      TextColor="White"
                      BackgroundColor="Pink"
                      Clicked="btnRoot_Clicked"/>

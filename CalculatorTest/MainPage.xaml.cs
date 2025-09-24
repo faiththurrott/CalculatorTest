@@ -113,6 +113,14 @@ public partial class MainPage : ContentPage
 
     private void btnRoot_Clicked(object sender, EventArgs e)
     {
+        double dNum1 = Calculator.GetNum(entryNum1.Text);
+
+        double dAnswer = Math.Sqrt(dNum1);
+        txtAnswer.Text = Convert.ToString(dAnswer);
+    }
+
+    private void btnPi_Clicked(object sender, EventArgs e)
+    {
 
     }
 }
