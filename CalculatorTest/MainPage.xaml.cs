@@ -121,6 +121,8 @@ public partial class MainPage : ContentPage
 
     private void btnPi_Clicked(object sender, EventArgs e)
     {
-
+        string dAnswer = "How many bakers does it take to bake a pi? 3.1415926535";
+       
+        txtAnswer.Text = Convert.ToString(dAnswer);
     }
 }

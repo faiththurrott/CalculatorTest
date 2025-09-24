@@ -44,6 +44,7 @@
                     Clicked="btnSubtract_Clicked"/>
                 <Button x:Name="btnPi"
                     Text="π"
+                    Padding="22"
                     FontSize="50"
                     TextColor="white"
                     BackgroundColor="pink"
