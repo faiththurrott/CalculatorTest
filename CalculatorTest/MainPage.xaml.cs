@@ -1,4 +1,6 @@
-﻿namespace CalculatorTest;
+﻿
+
+namespace CalculatorTest;
 
 class Calculator
 {
@@ -14,7 +16,7 @@ class Calculator
             }
             else
             {
-                return 0; // return
+                return 0;
             }
         }
         else
@@ -23,25 +25,25 @@ class Calculator
         }
     }
 }
-    public partial class MainPage : ContentPage
-    {
-        int count = 0;
+public partial class MainPage : ContentPage
+{
+    int count = 0;
 
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+    public MainPage()
+    {
+        InitializeComponent();
+    }
     public string correctText1;
     public string correctText2;
-        private void entryNum1_TextChanged(object sender, TextChangedEventArgs e)
+    private void entryNum1_TextChanged(object sender, TextChangedEventArgs e)
+    {
+        double dNumTemp = 0;
+        if (double.TryParse(entryNum1.Text, out dNumTemp))
         {
-            double dNumTemp = 0;
-            if(double.TryParse(entryNum1.Text, out dNumTemp))
-        {
-                correctText1 = entryNum1.Text;
+            correctText1 = entryNum1.Text;
         }
         else
-        {
+        { 
             entryNum1.CursorPosition=correctText1.Length;
             int selectionLength = e.NewTextValue.Length - correctText1.Length;
             if(selectionLength > 0)
@@ -49,12 +51,27 @@ class Calculator
                 entryNum1.SelectionLength = selectionLength;
             }
         }
-     }
+
+    }
 
         private void entryNum2_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            double dNumTemp = 0;
+        if (double.TryParse(entryNum2.Text, out dNumTemp))
+        {
+            correctText2 = entryNum2.Text;
         }
+        else
+        {
+            entryNum2.CursorPosition = correctText2.Length;
+            int selectionLength = e.NewTextValue.Length - correctText2.Length;
+            if(selectionLength > 0)
+            {
+                entryNum2.SelectionLength = selectionLength;
+            }
+        }
+    }
+        
 
         private void btnAdd_Clicked(object sender, EventArgs e)
         {
@@ -94,4 +111,3 @@ class Calculator
             txtAnswer.Text = Convert.ToString(dAnswer);
     }
     }
-
