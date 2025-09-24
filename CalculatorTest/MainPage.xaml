@@ -3,27 +3,39 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CalculatorTest.MainPage">
 
-    <ScrollView>
+    <ScrollView
+        Background="HotPink"
+        Padding="30">
         <VerticalStackLayout
-            Spacing="10"
-            Padding="60,0"
+            Spacing="20"
+            Padding="60"
             VerticalOptions="Center">
             <Label
                 Text="Calculator"
-                FontSize="32"
-                TextColor="Pink"
+                FontFamily="Times New Roman"
+                FontSize="50"
+                TextColor="White"
                 HorizontalOptions="Center"/>
             <Entry x:Name="entryNum1"
+                   FontSize="20"
+                   TextColor="White"
+                   FontFamily="Times New Roman"
                    Placeholder="Enter Number"
                    Keyboard="Numeric"
                    TextChanged="entryNum1_TextChanged"/>
 
             <Entry x:Name="entryNum2"
+                   FontSize="20"
+                   TextColor="White"
+                   FontFamily="Times New Roman"
                    Placeholder="Enter Number"
                    Keyboard="Numeric"
                    TextChanged="entryNum2_TextChanged"/>
             <Label x:Name="txtAnswer"
-                   Text="Answer"/>
+                   Text="Answer"
+                   FontFamily="Times New Roman"
+                   FontSize="20"
+                   TextColor="White"/>
 
             <HorizontalStackLayout
                 Spacing ="10"
@@ -32,22 +44,25 @@
                     Text="+"
                     Padding="25"
                     FontSize="50"
+                    FontFamily="Times New Roman"
                     TextColor="White"
-                    BackgroundColor="Pink"
+                    BackgroundColor="Violet"
                     Clicked="btnAdd_Clicked"/>
                 <Button x:Name="btnSubtract"
                     Text="-"
                     Padding="30"
                     FontSize="50"
+                    FontFamily="Times New Roman"
                     TextColor="White"
-                    BackgroundColor="Pink"
+                    BackgroundColor="Violet"
                     Clicked="btnSubtract_Clicked"/>
                 <Button x:Name="btnPi"
                     Text="π"
                     Padding="22"
                     FontSize="50"
+                    FontFamily="Times New Roman"
                     TextColor="white"
-                    BackgroundColor="pink"
+                    BackgroundColor="Violet"
                     Clicked="btnPi_Clicked"/>
             </HorizontalStackLayout>
 
@@ -59,22 +74,25 @@
                     Text="*"
                     FontSize="50"
                     Padding="25"
+                    FontFamily="Times New Roman"
                     TextColor="White"
-                    BackgroundColor="Pink"
+                    BackgroundColor="Violet"
                     Clicked="btnMultiply_Clicked"/>
                 <Button x:Name="btnDivide"
                     Text="/"
                     FontSize="50"
                     Padding="30"
+                    FontFamily="Times New Roman"
                     TextColor="White"
-                    BackgroundColor="Pink"
+                    BackgroundColor="Violet"
                     Clicked="btnDivide_Clicked"/>
                 <Button x:Name="btnRoot"
                      Text="^"
                      FontSize="50"
                      Padding="25"
+                     FontFamily="Times New Roman"
                      TextColor="White"
-                     BackgroundColor="Pink"
+                     BackgroundColor="Violet"
                      Clicked="btnRoot_Clicked"/>
 
             </HorizontalStackLayout>
