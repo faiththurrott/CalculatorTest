@@ -2,6 +2,7 @@
 
 namespace CalculatorTest;
 
+
 class Calculator
 {
     public static double GetNum(string numText)
@@ -35,6 +36,7 @@ public partial class MainPage : ContentPage
     }
     public string correctText1;
     public string correctText2;
+    private const string MyName = "Faith Thurrott";
     private void entryNum1_TextChanged(object sender, TextChangedEventArgs e)
     {
         double dNumTemp = 0;
@@ -127,8 +129,14 @@ public partial class MainPage : ContentPage
 
     private void btnPi_Clicked(object sender, EventArgs e)
     {
-        string dAnswer = "How many bakers does it take to bake a pi? 3.1415926535";
+        // show immediately
+        txtAnswer.Text = "How many bakers does it take to bake a pi? 3.1415926535";
 
-        txtAnswer.Text = Convert.ToString(dAnswer);
+        // pop the alert 5 seconds later (runs on UI thread)
+        Dispatcher.StartTimer(TimeSpan.FromSeconds(5), () =>
+        {
+            _ = DisplayAlert("Haha!", "got you", $"{MyName}");
+            return false; // one-shot (don't repeat)
+        });
     }
 }
