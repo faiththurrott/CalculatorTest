@@ -6,6 +6,7 @@
     <ScrollView>
         <VerticalStackLayout
             Spacing="10"
+            Padding="60,0"
             VerticalOptions="Center">
             <Label
                 Text="Calculator"
@@ -23,31 +24,54 @@
                    TextChanged="entryNum2_TextChanged"/>
             <Label x:Name="txtAnswer"
                    Text="Answer"/>
-            <Button x:Name="btnAdd"
+
+            <HorizontalStackLayout
+                Spacing ="10"
+                HorizontalOptions="Center">
+                <Button x:Name="btnAdd"
                     Text="+"
+                    Padding="25"
                     FontSize="50"
                     TextColor="White"
                     BackgroundColor="Pink"
                     Clicked="btnAdd_Clicked"/>
-            <Button x:Name="btnSubtract"
+                <Button x:Name="btnSubtract"
                     Text="-"
+                    Padding="30"
                     FontSize="50"
                     TextColor="White"
                     BackgroundColor="Pink"
                     Clicked="btnSubtract_Clicked"/>
-            <Button x:Name="btnMultiply"
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Spacing="10"
+                HorizontalOptions="Center">
+
+                <Button x:Name="btnMultiply"
                     Text="*"
                     FontSize="50"
+                    Padding="25"
                     TextColor="White"
                     BackgroundColor="Pink"
                     Clicked="btnMultiply_Clicked"/>
-            <Button x:Name="btnDivide"
+                <Button x:Name="btnDivide"
                     Text="/"
                     FontSize="50"
+                    Padding="30"
                     TextColor="White"
                     BackgroundColor="Pink"
                     Clicked="btnDivide_Clicked"/>
-            
+                <Button x:Name="btnRoot"
+                     Text="^"
+                     FontSize="50"
+                     Padding="35"
+                     TextColor="White"
+                     BackgroundColor="Pink"
+                     Clicked="btnRoot_Clicked"/>
+
+            </HorizontalStackLayout>
+
 
         </VerticalStackLayout>
     </ScrollView>

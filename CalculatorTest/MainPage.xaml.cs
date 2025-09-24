@@ -110,4 +110,9 @@ public partial class MainPage : ContentPage
             double dAnswer = dNum1 / dNum2;
             txtAnswer.Text = Convert.ToString(dAnswer);
     }
+
+    private void btnRoot_Clicked(object sender, EventArgs e)
+    {
+
     }
+}
